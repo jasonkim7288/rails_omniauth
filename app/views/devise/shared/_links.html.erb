@@ -1,0 +1,50 @@
+<%- if controller_name != 'sessions' %>
+    <%= link_to "Log in", new_session_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+    <div class="text-right">
+        <%= link_to "Forgot your password?", new_password_path(resource_name)%><br />
+    </div>
+<% end %>
+
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+    <div class="text-right">
+        <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+    </div>
+<% end %>
+
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+    <div class="text-right">
+        <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+    </div>
+<% end %>
+
+<%- if devise_mapping.omniauthable? %>
+        <div class="my-4">
+    <%- resource_class.omniauth_providers.each do |provider| %>
+        <%
+            provider_name = provider == :google_oauth2 ? "Google" : OmniAuth::Utils.camelize(provider)
+            case provider
+            when :facebook
+                btn_color, icon = "btn-info", "fa-facebook-f"
+            when :github
+                btn_color, icon = "btn-dark", "fa-github"
+            when :google_oauth2
+                btn_color, icon = "btn-danger", "fa-google" 
+            else
+                btn_color, icon = "", ""
+            end
+        %>
+        <%= link_to omniauth_authorize_path(resource_name, provider), type: "button", class: "btn btn-block my-2 #{btn_color}" do %>
+            <i class="fab <%= icon %> mr-2"></i><%= "Continue with #{provider_name}" %>
+        <% end %>
+    <% end %>
+    </div>
+<% end %>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    <div class="text-center">
+        Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+    </div>
+<% end %>
