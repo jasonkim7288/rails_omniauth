@@ -1,24 +1,17 @@
-# README
+# Beautiful OAuth Login template with Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Link
+### Github link : https://github.com/jasonkim7288/rails_omniauth
+### Deploy link : https://oauthjason.herokuapp.com/
 
-Things you may want to cover:
+## Description
+Whenever making a Rails app, log in functions are needed, so here is a template for log in functions with OAuth in it.
 
-* Ruby version
+![Image of OAuth](docs/OAuth.png)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tech stack
+- Rails : Front end and back end source code
+- Heroku : deploy the code
+- OmniAuth : OAuth2 implementation gem
+- devise : login gem
+- bootstrap : make pages look pretty using gem
