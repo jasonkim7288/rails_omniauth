@@ -53,3 +53,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'cancancan'
 gem 'rolify'
+gem "stimulus_reflex", "~> 3.2"
