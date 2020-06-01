@@ -54,3 +54,9 @@ gem 'devise'
 gem 'cancancan'
 gem 'rolify'
 gem "stimulus_reflex", "~> 3.2"
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+gem 'activerecord-session_store'

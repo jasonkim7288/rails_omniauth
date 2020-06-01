@@ -10,6 +10,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap
  *= require_tree .
  *= require_self
  */
+
+
+.rm-link-style:onhover {
+    text-decoration: none;
+}
+
+.btn-facebook {
+    background-color: #395694;
+    border-color: #395694;
+}
+
+.btn-github {
+    background-color: rgb(77, 77, 77);
+    border-color: rgb(77, 77, 77);
+}
+
+.btn-google {
+    background-color: #d64937;
+    border-color: #d64937;
+}
+
